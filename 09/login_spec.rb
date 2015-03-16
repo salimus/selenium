@@ -25,7 +25,8 @@ describe 'Login' do
 
   it "failed" do
     @login.with('asdf', 'asdf')
-    @login.failure_message_present?.should be_true
+    @login.success_message_present?.should be_false
+    #@login.failure_message_present?.should be_true
   end
 
 end
